@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="." method='POST'>{% csrf_token %}
+{{ form.as_p }}
+<!--  turns form as context into an actual html form, render out with paragraph text -->
+
+    <input type="submit" value="Save" />
+</form>
+
+{% endblock %}
